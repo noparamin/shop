@@ -15,13 +15,15 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((authorization) -> authorization.anyRequest().authenticated()).httpBasic(Customizer.withDefaults());
+        http.authorizeHttpRequests((authorization) -> authorization.anyRequest().permitAll()).httpBasic(Customizer.withDefaults());
 
         return http.build();
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
 }
