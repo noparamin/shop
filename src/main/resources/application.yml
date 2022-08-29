@@ -8,12 +8,13 @@ spring:
     username: root
     password: zswtd0428
   jpa:
+    hibernate:
+      ddl-auto: create
     properties:
       hibernate:
         show_sql: true
         format_sql: true
-        ddl-auto: create
-  database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
   thymeleaf:
     cache: false
 
