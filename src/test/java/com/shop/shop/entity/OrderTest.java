@@ -97,7 +97,7 @@ class OrderTest {
     }
 
     @Test
-    @DisplayName("고악객체 제거 테스트")
+    @DisplayName("고아객체 제거 테스트")
     public void orphanRemovalTest() {
         Order order = this.createOrder();
         order.getOrderItems().remove(0);
