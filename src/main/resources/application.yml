@@ -5,12 +5,19 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/shop?serverTimezone=UTC
-    username: 
-    password: 
+    username:
+    password:
+  servlet:
+    multipart:
+      maxFileSize: 20MB
+      maxRequestSize: 100MB
+
+itemImgLocation: E:/study/spring/item
+uploadPath: file:///E:/study/spring/item
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         show_sql: true
