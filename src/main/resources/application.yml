@@ -12,9 +12,6 @@ spring:
       maxFileSize: 20MB
       maxRequestSize: 100MB
 
-itemImgLocation: E:/study/spring/item
-uploadPath: file:///E:/study/spring/item
-
   jpa:
     hibernate:
       ddl-auto: validate
@@ -25,6 +22,9 @@ uploadPath: file:///E:/study/spring/item
     database-platform: org.hibernate.dialect.MySQL8Dialect
   thymeleaf:
     cache: false
+
+itemImgLocation: E:/study/spring/item
+uploadPath: file:///E:/study/spring/item
 
 logging:
   level:
