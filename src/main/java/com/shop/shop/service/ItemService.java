@@ -3,6 +3,7 @@ package com.shop.shop.service;
 import com.shop.shop.dto.ItemFormDto;
 import com.shop.shop.dto.ItemImgDto;
 import com.shop.shop.dto.ItemSearchDto;
+import com.shop.shop.dto.MainItemDto;
 import com.shop.shop.entity.Item;
 import com.shop.shop.entity.ItemImg;
 import com.shop.shop.repository.ItemImgRepository;
@@ -80,6 +81,11 @@ public class ItemService {
     @Transactional(readOnly = true)
     public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
         return itemRepository.getAdminItemPage(itemSearchDto, pageable);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<MainItemDto> getMainItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
+        return itemRepository.getMainItemPage(itemSearchDto, pageable);
     }
 
 }
