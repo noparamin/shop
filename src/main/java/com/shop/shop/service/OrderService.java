@@ -25,7 +25,7 @@ public class OrderService {
     private MemberRepository memberRepository;
     private OrderRepository orderRepository;
 
-    public Long Order(OrderDto orderDto, String email) {
+    public Long order(OrderDto orderDto, String email) {
         Item item = itemRepository.findById(orderDto.getItemId()).orElseThrow(EntityNotFoundException::new);
         Member member = memberRepository.findByEmail(email);
 
